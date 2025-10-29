@@ -1,0 +1,92 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8ff;
+    scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    background-color: #fff;
+  }
+  
+  .nav-link {
+    color: #555 !important;
+    margin-right: 20px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #8a2be2 !important;
+  }
+  
+  .text-violet {
+    color: #8a2be2;
+  }
+  
+  .btn-violet {
+    background-color: #8a2be2;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 25px;
+    transition: 0.3s;
+  }
+  
+  .btn-violet:hover {
+    background-color: #6c1fb7;
+  }
+  
+  .section {
+    padding: 100px 0;
+  }
+  
+  .subtitle {
+    color: #a37cf0;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  
+  /* ===== Timeline ===== */
+  .timeline-item {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-left: 4px solid #8a2be2;
+    width: 60%;
+    text-align: left;
+    border-radius: 8px;
+  }
+  
+  /* ===== Skills ===== */
+  .skill-card {
+    background-color: #eae6ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    color: #4a2880;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  .skill-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* ===== Projects ===== */
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #e6d9ff;
+    transition: 0.3s;
+  }
+  
+  .project-card:hover {
+    border-color: #8a2be2;
+    transform: translateY(-5px);
+  }
+  
+  /* ===== Footer ===== */
+  .footer {
+    background-color: #8a2be2;
+    color: white;
+  }

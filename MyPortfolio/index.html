@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hi, I'm Mitunchandran SR | Frontend & Biomedical Innovator</title>
+    
+    <!-- Bootstrap CSS for structure and responsiveness -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS CSS for Scroll Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Color Palette & Global Styles */
+        :root {
+            --primary-color: #4F46E5; /* Indigo */
+            --secondary-color: #8B5CF6; /* Violet */
+            --text-dark: #1E293B;
+            --text-light: #64748B;
+            --bg-light: #F8F9FA; /* Light background for contrast sections */
+        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .section { padding: 6rem 0 2rem; }
+        .section__title { 
+            font-size: 2.25rem; 
+            font-weight: 800; 
+            color: var(--primary-color); 
+            margin-bottom: 3rem; 
+        }
+        
+        /* Navbar */
+        .navbar-brand {
+            font-weight: 800;
+        }
+
+        /* Hover effect for social links */
+        .home__social a:hover {
+            color: var(--secondary-color) !important;
+            transform: translateY(-2px);
+            transition: all 0.3s;
+        }
+
+        /* Timeline Styling */
+        .timeline-container {
+            position: relative;
+            padding: 0 0 0 30px; /* Space for the line */
+        }
+        .profile-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 240px;
+  height: 240px;
+  background: var(--primary-color); /* purple background like Alexa's */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.profile-img {
+  position: relative;
+  width: 220px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+        /* Vertical Line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 15px;
+            width: 3px;
+            height: 100%;
+            background-color: #E5E7EB; 
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 20px;
+        }
+        /* Circle Marker */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid var(--primary-color);
+            z-index: 10;
+        }
+        .timeline-box {
+            background-color: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        .timeline-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Background Colors for sections to create contrast */
+        .bg-light {
+            background-color: var(--bg-light) !important;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    
+    <header class="header fixed-top" id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">M<span style="color: var(--primary-color);">SR</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#home"><i class="fas fa-home me-1"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user me-1"></i> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-code me-1"></i> Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio"><i class="fas fa-project-diagram me-1"></i> Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope me-1"></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        
+        <!--==================== 1. HOME ====================-->
+        <section class="home section pt-5" id="home">
+            <div class="container text-center pt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mx-auto" data-aos="fade-up">
+                        <!-- Placeholder Image: Please replace with your actual profile picture at assets/profile.jpg -->
+                        <img src="assets/profile.jpg" alt="Profile" class="rounded-circle shadow-lg mb-4 border border-4" width="200" style="border-color: var(--secondary-color) !important;">
+
+                        <h1 class="home__title display-4 fw-bold" style="color: var(--primary-color);">Hi, I'm Mitunchandran SR</h1>
+                        <h3 class="home__subtitle text-muted">Frontend Developer | Data Analyst | Biomedical Innovator</h3>
+                        
+                        <p class="home__description lead mt-4">
+                            High level experience in combining web development, data analysis, and AI principles, producing quality, innovative work.
+                        </p>
+
+                        <div class="d-flex justify-content-center gap-3 home__social mt-4">
+                            <a href="http://linkedin.com/in/mitunchandran-sr-0b63402a4" target="_blank" class="text-decoration-none h4" style="color: #0077B5;"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/your-github" target="_blank" class="text-decoration-none h4" style="color: var(--text-dark);"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" class="text-decoration-none h4" style="color: #EA4C89;"><i class="fab fa-figma"></i></a>
+                        </div>
+                        
+                        <a href="assets/resume.pdf" class="btn btn-lg btn-primary mt-4 rounded-pill" download style="background-color: var(--secondary-color); border: none;">
+                            <i class="fas fa-file-download me-2"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 2. ABOUT ====================-->
+        <section class="about section bg-light" id="about">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">About Me</h2>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto">
+                        <p class="about__description lead text-muted text-center">
+                            A dedicated Computer Science Engineering student focused on building the future at the intersection of technology and biology. Proficient in **Frontend development (HTML, CSS, JS)**, skilled in **Data Analytics (Power BI, Python)**, and driven by **Biomedical AI** innovation.
+                        </p>
+                        
+                        <div class="row text-center mt-5 about__info-name">
+                            <div class="col-4">
+                                <h3 class="fw-bold" style="color: var(--primary-color);">2+</h3>
+                                <p class="text-muted">Years <br> Experience (Dev/Data)</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold" style="color: var(--primary-color);">6+</h3>
+                                <p class="text-muted">Completed <br> Projects (Including Patent)</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold" style="color: var(--primary-color);">2</h3>
+                                <p class="text-muted">Companies <br> Worked (Internships)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 3. SKILLS ====================-->
+        <section class="skills section" id="skills">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Technical Skills</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-4">
+                                <div class="card p-4 shadow-sm h-100 rounded-lg">
+                                    <i class="fas fa-laptop-code fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                    <h5 class="fw-bold">Frontend Development</h5>
+                                    <p class="text-muted">HTML, CSS, JavaScript, Bootstrap, UI/UX Principles.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card p-4 shadow-sm h-100 rounded-lg">
+                                    <i class="fas fa-chart-bar fa-3x mb-3" style="color: var(--secondary-color);"></i>
+                                    <h5 class="fw-bold">Data Analysis</h5>
+                                    <p class="text-muted">Python (Pandas, Seaborn), Excel, Power BI.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card p-4 shadow-sm h-100 rounded-lg">
+                                    <i class="fas fa-brain fa-3x mb-3" style="color: var(--primary-color);"></i>
+                                    <h5 class="fw-bold">AI & Design</h5>
+                                    <p class="text-muted">Deep Learning (GPU Accel.), Figma Prototyping, Data Structures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 4. QUALIFICATIONS & JOURNEY (TIMELINE) ====================-->
+        <section class="qualification section bg-light" id="qualification">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Qualifications & Journey Timeline</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        
+                        <div class="timeline-container">
+                            
+                            <!-- Timeline Item 1: B.E. Start -->
+                            <div class="timeline-item" data-aos="fade-right">
+                                <div class="timeline-box">
+                                    <h5 class="fw-bold" style="color: var(--primary-color);">2023 - Present</h5>
+                                    <p class="mb-1 text-dark fw-bold">B.E. Computer Science Engineering</p>
+                                    <p class="small text-secondary">K. Ramakrishnan College of Engineering | Maintaining 7.5/10 CGPA.</p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 2: UI/UX Internship -->
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-box">
+                                    <h5 class="fw-bold" style="color: var(--primary-color);">Mid 2024 (3 Months)</h5>
+                                    <p class="mb-1 text-dark fw-bold">UI/UX & Figma Intern - CoderScore</p>
+                                    <p class="small text-secondary">Created user-centric prototypes and high-fidelity designs, enhancing practical design skills.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timeline Item 3: Frontend Internship -->
+                            <div class="timeline-item" data-aos="fade-right">
+                                <div class="timeline-box">
+                                    <h5 class="fw-bold" style="color: var(--primary-color);">Late 2024 (3 Months)</h5>
+                                    <p class="mb-1 text-dark fw-bold">Frontend Developer Intern - Alfido Tech</p>
+                                    <p class="small text-secondary">Built responsive UIs and focused on component integration and high performance.</p>
+                                </div>
+                            </div>
+
+                             <!-- Timeline Item 4: Major Project/Patent Filing -->
+                            <div class="timeline-item" data-aos="fade-left">
+                                <div class="timeline-box">
+                                    <h5 class="fw-bold" style="color: var(--primary-color);">2024 - Patent Project</h5>
+                                    <p class="mb-1 text-dark fw-bold">CardiNail Biomedical AI Patent Project</p>
+                                    <p class="small text-secondary">Initiated and filed the patent for the AI-powered diagnostic device, combining Deep Learning with healthcare innovation.</p>
+                                </div>
+                            </div>
+
+                            <!-- Timeline Item 5: Certifications (Grouped) -->
+                            <div class="timeline-item" data-aos="fade-right">
+                                <div class="timeline-box">
+                                    <h5 class="fw-bold" style="color: var(--primary-color);">2023-2024</h5>
+                                    <p class="mb-1 text-dark fw-bold">Core Certifications Achieved</p>
+                                    <p class="small text-secondary">Accelerating Deep Learning with GPUs (IBM) and Data Analytics Tools training (Neolysi Technologies).</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 5. SERVICES ====================-->
+        <section class="services section" id="services">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Services & Capabilities</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="card p-4 shadow-lg text-center h-100 rounded-lg">
+                            <i class="fas fa-palette fa-2x mb-3" style="color: var(--primary-color);"></i>
+                            <h5 class="fw-bold">UI/UX Design & Development</h5>
+                            <ul class="list-unstyled text-start small mt-3">
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> I develop the user interface.</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> Web page development (Responsive).</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> I create UX element interactions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-4 mb-4">
+                        <div class="card p-4 shadow-lg text-center h-100 rounded-lg">
+                            <i class="fas fa-chart-pie fa-2x mb-3" style="color: var(--primary-color);"></i>
+                            <h5 class="fw-bold">Data Analysis & Visualization</h5>
+                            <ul class="list-unstyled text-start small mt-3">
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> Data cleaning and preprocessing (Python).</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> Interactive dashboards (Power BI).</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> Delivering data-driven insights.</li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-4 mb-4">
+                        <div class="card p-4 shadow-lg text-center h-100 rounded-lg">
+                            <i class="fas fa-lightbulb fa-2x mb-3" style="color: var(--primary-color);"></i>
+                            <h5 class="fw-bold">AI & Biomedical Innovation</h5>
+                            <ul class="list-unstyled text-start small mt-3">
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> AI model conceptualization.</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> Patent project development (CardiNail).</li>
+                                <li><i class="fas fa-check-circle me-2" style="color: var(--secondary-color);"></i> I position your company brand (Technical focus).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 6. PORTFOLIO ====================-->
+        <section class="portfolio section bg-light" id="portfolio">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Portfolio of Projects</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card p-3 shadow-sm h-100 rounded-lg">
+                            <h5 class="fw-bold" style="color: var(--primary-color);">CardiNail (Patent Project)</h5>
+                            <p class="portfolio__description text-muted">
+                                AI-powered biomedical device for early heart disease detection via nail image analysis. Status: Patent Filed.
+                            </p>
+                            <span class="badge bg-primary">AI/ML</span> <span class="badge bg-danger">Biomedical</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card p-3 shadow-sm h-100 rounded-lg">
+                            <h5 class="fw-bold" style="color: var(--primary-color);">IoT Pest Control System</h5>
+                            <p class="portfolio__description text-muted">
+                                Team project to build a digital pest monitoring system using IoT and data analysis.
+                            </p>
+                            <span class="badge bg-success">IoT</span> <span class="badge bg-info text-dark">Data Analysis</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card p-3 shadow-sm h-100 rounded-lg">
+                            <h5 class="fw-bold" style="color: var(--primary-color);">Airport Booking System</h5>
+                            <p class="portfolio__description text-muted">
+                                Semester project in Data Structures using the Queue concept for efficient booking management.
+                            </p>
+                            <span class="badge bg-warning text-dark">Java</span> <span class="badge bg-secondary">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 7. CALL TO ACTION ====================-->
+        <section class="project section" style="background-color: var(--secondary-color);">
+            <div class="container text-center text-white" data-aos="zoom-in">
+                <h2 class="section__title text-white">Have a Project in Mind?</h2>
+                <p class="project__description lead mb-4">
+                    Contact me now to discuss your idea and leverage my skills in data and development.
+                </p>
+                <a href="#contact" class="btn btn-lg btn-light fw-bold rounded-pill">
+                    <i class="fas fa-handshake me-2"></i> Let's Collaborate!
+                </a>
+            </div>
+        </section>
+
+        <!--==================== 8. COMMITMENT STATEMENT ====================-->
+        <section class="testimonial section">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Commitment Statement</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <blockquote class="blockquote">
+                            <i class="fas fa-quote-left fa-2x mb-3" style="color: var(--secondary-color);"></i>
+                            <p class="testimonial__description lead text-muted">
+                                I get a good impression, I carry out my project with all the possible quality and attention, and offer committed support throughout the process.
+                            </p>
+                            <footer class="blockquote-footer mt-3" style="color: var(--primary-color);">Mitunchandran SR</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== 9. CONTACT ====================-->
+        <section class="contact section bg-light" id="contact">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section__title text-center">Get In Touch</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card p-4 shadow-lg rounded-lg">
+                             <div class="d-flex flex-column gap-3">
+                                <p class="h5"><i class="fas fa-at me-3" style="color: var(--primary-color);"></i>Email: <a href="mailto:mitunchandran.sr@gmail.com" class="text-decoration-none text-dark">mitunchandran.sr@gmail.com</a></p>
+                                <p class="h5"><i class="fab fa-linkedin-in me-3" style="color: var(--primary-color);"></i>LinkedIn: <a href="http://linkedin.com/in/mitunchandran-sr-0b63402a4" target="_blank" class="text-decoration-none text-dark">mitunchandran-sr-0b63402a4</a></p>
+                                <p class="h5"><i class="fas fa-phone me-3" style="color: var(--primary-color);"></i>Phone: (Available upon request)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer py-4" style="background-color: var(--text-dark);">
+        <div class="container text-center">
+            <p class="text-white">&copy; 2025 Mitunchandran SR. All rights reserved.</p>
+            <div class="d-flex justify-content-center gap-3 mt-3 footer__social">
+                <a href="https://www.linkedin.com/in/mitunchandran-sr-0b63402a4" target="_blank" class="text-decoration-none text-white-50"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a href="#" target="_blank" class="text-decoration-none text-white-50"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="#" target="_blank" class="text-decoration-none text-white-50"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!--==================== JAVASCRIPT & AOS INIT ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+        // The script tags for swiper-bundle.min.js and main.js were removed as they referenced external, non-existent files.
+    </script>
+</body>
+</html>
